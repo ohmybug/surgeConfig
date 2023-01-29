@@ -1,0 +1,9 @@
+#!name=本地scokets端口修改
+#!desc=本地scokets端口修改
+[General]
+# 监听地址 (默认值: 127.0.0.1)
+interface = 0.0.0.0
+# HTTP 服务端口 (默认值: 6152)
+port = 7890
+# SOCKS5 服务端口 (默认值: 6153)
+socks-port = 7890
