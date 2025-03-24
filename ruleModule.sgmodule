@@ -12,4 +12,5 @@
 #!total=67
 
 [Rule]
-DOMAIN-SUFFIX,kxdao.net,REJECT
+DOMAIN-SUFFIX,kxdao.net,DIRECT
+DOMAIN-SUFFIX,2023wk.cn,DIRECT
