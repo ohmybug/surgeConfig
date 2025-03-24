@@ -1,0 +1,15 @@
+#!name=AdvertisingScript
+#!desc=最后更新时间 2025-03-24 16:18:43
+#!author=blackmatrix7
+#!repo=ttps://github.com/ohmybug/surgeConfig
+#!category=Evan
+#!domain=5
+#!url-regex=4
+#!http-request-script=1
+#!http-response-script=25
+#!reject=11
+#!mitm=21
+#!total=67
+
+[Rule]
+DOMAIN-SUFFIX,kxdao.net,REJECT
