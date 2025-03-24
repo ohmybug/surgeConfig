@@ -1,8 +1,8 @@
 #!name=AdvertisingScript
-#!desc=最后更新时间 2025-03-24 16:18:43
-#!author=blackmatrix7
+#!desc=最后更新时间 2025-03-24 21:00:43
+#!author=Evan
 #!repo=ttps://github.com/ohmybug/surgeConfig
-#!category=Evan
+#!category=EvanRule
 #!domain=5
 #!url-regex=4
 #!http-request-script=1
