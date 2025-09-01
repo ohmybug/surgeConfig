@@ -1,0 +1,154 @@
+# Loon For IOS Evan配置
+# Date: 2025-09-01 09:25:00
+# Author: Evan
+# Evan博客www.evantalk.com
+
+[General]
+ip-mode = v4-only
+dns-server = system
+sni-sniffing = true
+disable-stun = true
+dns-reject-mode = LoopbackIP
+domain-reject-mode = DNS
+udp-fallback-mode = REJECT
+wifi-access-http-port = 7222
+wifi-access-socks5-port = 7221
+allow-wifi-access = false
+interface-mode = auto
+test-timeout = 2
+disconnect-on-policy-change = false
+switch-node-after-failure-times = 3
+internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
+proxy-test-url = http://www.gstatic.com/generate_204
+resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+geoip-url = https://geodata.kelee.one/Country-Masaiki.mmdb
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+
+[Proxy]
+
+[Remote Proxy]
+# 订阅信息，自己添加
+
+
+[Remote Filter]
+ALL_Filter = NameRegex, FilterKey = ".*"
+🚀 所有节点 = NameRegex, FilterKey = ".*"
+🇭🇰 香港 = NameRegex, FilterKey = "^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+🇨🇳 台湾 = NameRegex, FilterKey = "^(?=.*((?i)🇹🇼｜🇨🇳|台湾|(\b(TW|TWN|Tai|Taiwan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+🇯🇵 日本 = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+🇰🇷 韩国 = NameRegex, FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+🇸🇬 狮城 = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+🇺🇲 美国 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+
+[Proxy Group]
+🚀 节点选择 = select,DIRECT,♻️自动选择,🚀 手动切换,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇸🇬 狮城节点,🇺🇲 美国节点
+♻️自动选择 = url-test,🚀 所有节点,url = http://www.gstatic.com/generate_204,interval = 600
+🚀 手动切换 = select,🚀 所有节点
+📲 电报消息 = select,🚀 节点选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
+💬 Ai平台 = select,🚀 节点选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
+📹 油管视频 = select,🚀 节点选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
+🎥 奈飞视频 = select,🚀 节点选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
+📺 巴哈姆特 = select,🇨🇳 台湾节点,🚀 节点选择,🚀 手动切换,DIRECT
+📺 哔哩哔哩 = select,🎯 全球直连,🇨🇳 台湾节点,🇭🇰 香港节点
+🌍 国外媒体 = select,🚀 节点选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
+🌏 国内媒体 = select,DIRECT,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🚀 手动切换
+📢 谷歌FCM = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换
+Ⓜ️ 微软Bing = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换
+Ⓜ️ 微软云盘 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换
+Ⓜ️ 微软服务 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换
+🍎 苹果服务 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换
+🎮 游戏平台 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换
+🎶 网易音乐 = select,DIRECT,🚀 节点选择
+🎯 全球直连 = select,DIRECT,🚀 节点选择
+🛑 广告拦截 = select,REJECT,DIRECT
+🍃 应用净化 = select,REJECT,DIRECT
+🐟 漏网之鱼 = select,🚀 节点选择,DIRECT,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换
+🇭🇰 香港节点 = url-test,🇭🇰 香港,url = http://www.gstatic.com/generate_204,interval = 600
+🇨🇳 台湾节点 = url-test,🇨🇳 台湾,url = http://www.gstatic.com/generate_204,interval = 600
+🇯🇵 日本节点 = url-test,🇯🇵 日本,url = http://www.gstatic.com/generate_204,interval = 600
+🇰🇷 韩国节点 = url-test,🇰🇷 韩国,url = http://www.gstatic.com/generate_204,interval = 600
+🇸🇬 狮城节点 = url-test,🇸🇬 狮城,url = http://www.gstatic.com/generate_204,interval = 600
+🇺🇲 美国节点 = url-test,🇺🇲 美国,url = http://www.gstatic.com/generate_204,interval = 600
+
+
+[Rule]
+#Type:DOMAIN-SUFFIX,DOMAIN,DOMAIN-KEYWORD,USER-AGENT,URL-REGEX,IP-CIDR
+#Strategy:DIRECT,PROXY,REJECT
+#Options:no-resolve(only for IP-CIDR,IP-CIDR2,GEOIP,IP-ASN)
+
+#FINAL,DIRECT
+GEOIP,CN,🎯 全球直连
+FINAL,🐟 漏网之鱼
+
+
+
+[Remote Rule]
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list, policy=🛑 广告拦截, tag=🛑 广告拦截, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list, policy=🍃 应用净化, tag=🍃 应用净化, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list, policy=📢 谷歌FCM, tag=📢 谷歌FCM, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.list, policy=Ⓜ️ 微软Bing, tag=Ⓜ️ 微软Bing, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list, policy=Ⓜ️ 微软云盘, tag=Ⓜ️ 微软云盘, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list, policy=Ⓜ️ 微软服务, tag=Ⓜ️ 微软服务, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list, policy=🍎 苹果服务, tag=🍎 苹果服务, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list, policy=📲 电报消息, tag=📲 电报消息, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list, policy=💬 Ai平台, tag=💬 Ai平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list, policy=💬 Ai平台, tag=💬 Ai平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetEaseMusic.list, policy=🎶 网易音乐, tag=🎶 网易音乐, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list, policy=🎮 游戏平台, tag=🎮 游戏平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list, policy=🎮 游戏平台, tag=🎮 游戏平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list, policy=🎮 游戏平台, tag=🎮 游戏平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list, policy=🎮 游戏平台, tag=🎮 游戏平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list, policy=🎮 游戏平台, tag=🎮 游戏平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list, policy=📹 油管视频, tag=📹 油管视频, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list, policy=🎥 奈飞视频, tag=🎥 奈飞视频, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list, policy=📺 巴哈姆特, tag=📺 巴哈姆特, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list, policy=📺 哔哩哔哩, tag=📺 哔哩哔哩, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list, policy=📺 哔哩哔哩, tag=📺 哔哩哔哩, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list, policy=🌏 国内媒体, tag=🌏 国内媒体, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list, policy=🌍 国外媒体, tag=🌍 国外媒体, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, policy=🚀 手动切换, tag=🚀 节点选择, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
+
+[Host]
+
+[Rewrite]
+
+[Script]
+
+[Plugin]
+https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/AppleWeatherEnhancer.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Cainiao_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Spotify_lyrics_translation.lpx, enabled=true
+https://raw.githubusercontent.com/IC58G/vpn_tool/main/Resource/Plugin/baby/Unlock-S.plugin, policy=手动选择, enabled=true
+https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.plugin, enabled=false
+https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, enabled=true
+https://raw.githubusercontent.com/app2smile/rules/master/plugin/bilibili.plugin, enabled=false
+https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Loon/TikTok-JP.plugin, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BaiduMap_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/TubeMax_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/NeteaseCloudMusic_remove_ads.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/ColorfulClouds_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/LoonGallery.lpx, policy=🐟 漏网之鱼, tag=插件仓库, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BoxJs.lpx, policy=🐟 漏网之鱼, tag=BoxJs, enabled=true
+https://kelee.one/Tool/Loon/Lpx/TestFlightRegionUnlock.lpx, policy=DIRECT, tag=TestFlight地区解锁, enabled=false
+https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🐟 漏网之鱼, tag=Sub-Store, enabled=false
+https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🐟 漏网之鱼, tag=Script-Hub, enabled=true
+
+[Mitm]
+#待添加
