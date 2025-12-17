@@ -69,7 +69,9 @@ ALL_Filter = NameRegex, FilterKey = ".*"
 #Strategy:DIRECT,PROXY,REJECT
 #Options:no-resolve(only for IP-CIDR,IP-CIDR2,GEOIP,IP-ASN)
 
-FINAL,DIRECT
+#FINAL,DIRECT
+GEOIP,CN,🎯 全球直连
+FINAL,🐟 漏网之鱼
 
 [Remote Rule]
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list, policy=DIRECT, tag=🎯 全球直连, enabled=true
