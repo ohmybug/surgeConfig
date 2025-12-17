@@ -4,6 +4,7 @@
 #Desc:loon for mac的基础配置，可在此基础上进行修改
 
 [General]
+disconnect-on-policy-change = true
 ip-mode = dual
 skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
 bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
@@ -19,6 +20,7 @@ interface-mode = auto
 [Proxy]
 
 [Remote Proxy]
+#这里添加远程订阅
 
 [Proxy Chain]
 
@@ -26,13 +28,13 @@ interface-mode = auto
 🚀 节点选择 = select,DIRECT,♻️自动选择,🚀 手动切换,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇸🇬 狮城节点,🇺🇲 美国节点
 ♻️自动选择 = url-test,🚀 所有节点,url = http://www.gstatic.com/generate_204,interval = 600
 🚀 手动切换 = select,🚀 所有节点
-📲 电报消息 = select,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
-💬 Ai平台 = select,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
-📹 油管视频 = select,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
-🎥 奈飞视频 = select,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
+📲 电报消息 = select,🚀 节点选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
+💬 Ai平台 = select,🚀 节点选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
+📹 油管视频 = select,🚀 节点选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
+🎥 奈飞视频 = select,🚀 节点选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
 📺 巴哈姆特 = select,🇨🇳 台湾节点,🚀 节点选择,🚀 手动切换,DIRECT
 📺 哔哩哔哩 = select,🎯 全球直连,🇨🇳 台湾节点,🇭🇰 香港节点
-🌍 国外媒体 = select,🚀 节点选择,♻️ 自动选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
+🌍 国外媒体 = select,🚀 节点选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
 🌏 国内媒体 = select,DIRECT,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🚀 手动切换
 📢 谷歌FCM = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换
 Ⓜ️ 微软Bing = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换
@@ -40,11 +42,11 @@ interface-mode = auto
 Ⓜ️ 微软服务 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换
 🍎 苹果服务 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换
 🎮 游戏平台 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换
-🎶 网易音乐 = select,DIRECT,🚀 节点选择,♻️ 自动选择
-🎯 全球直连 = select,DIRECT,🚀 节点选择,♻️ 自动选择
+🎶 网易音乐 = select,DIRECT,🚀 节点选择
+🎯 全球直连 = select,DIRECT,🚀 节点选择
 🛑 广告拦截 = select,REJECT,DIRECT
 🍃 应用净化 = select,REJECT,DIRECT
-🐟 漏网之鱼 = select,🚀 节点选择,♻️ 自动选择,DIRECT,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换
+🐟 漏网之鱼 = select,🚀 节点选择,DIRECT,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换
 🇭🇰 香港节点 = url-test,🇭🇰 香港,url = http://www.gstatic.com/generate_204,interval = 600
 🇨🇳 台湾节点 = url-test,🇨🇳 台湾,url = http://www.gstatic.com/generate_204,interval = 600
 🇯🇵 日本节点 = url-test,🇯🇵 日本,url = http://www.gstatic.com/generate_204,interval = 600
@@ -74,37 +76,37 @@ GEOIP,CN,🎯 全球直连
 FINAL,🐟 漏网之鱼
 
 [Remote Rule]
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list, policy=DIRECT, tag=🎯 全球直连, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list, policy=DIRECT, tag=🎯 全球直连, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list, policy=REJECT, tag=🛑 广告拦截, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list, policy=REJECT, tag=🍃 应用净化, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list, policy=DIRECT, tag=📢 谷歌FCM, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list, policy=DIRECT, tag=🎯 全球直连, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list, policy=DIRECT, tag=🎯 全球直连, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.list, policy=DIRECT, tag=Ⓜ️ 微软Bing, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list, policy=DIRECT, tag=Ⓜ️ 微软云盘, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list, policy=DIRECT, tag=Ⓜ️ 微软服务, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list, policy=DIRECT, tag=🍎 苹果服务, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list, policy=DIRECT, tag=📲 电报消息, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list, policy=DIRECT, tag=💬 Ai平台, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list, policy=DIRECT, tag=💬 Ai平台, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetEaseMusic.list, policy=DIRECT, tag=🎶 网易音乐, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list, policy=DIRECT, tag=🎮 游戏平台, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list, policy=DIRECT, tag=🎮 游戏平台, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list, policy=DIRECT, tag=🎮 游戏平台, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list, policy=DIRECT, tag=🎮 游戏平台, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list, policy=DIRECT, tag=🎮 游戏平台, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list, policy=DIRECT, tag=📹 油管视频, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list, policy=DIRECT, tag=🎥 奈飞视频, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list, policy=DIRECT, tag=📺 巴哈姆特, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list, policy=🛑 广告拦截, tag=🛑 广告拦截, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list, policy=🍃 应用净化, tag=🍃 应用净化, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list, policy=📢 谷歌FCM, tag=📢 谷歌FCM, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.list, policy=Ⓜ️ 微软Bing, tag=Ⓜ️ 微软Bing, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list, policy=Ⓜ️ 微软云盘, tag=Ⓜ️ 微软云盘, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list, policy=Ⓜ️ 微软服务, tag=Ⓜ️ 微软服务, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list, policy=🍎 苹果服务, tag=🍎 苹果服务, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list, policy=📲 电报消息, tag=📲 电报消息, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list, policy=💬 Ai平台, tag=💬 Ai平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list, policy=💬 Ai平台, tag=💬 Ai平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetEaseMusic.list, policy=🎶 网易音乐, tag=🎶 网易音乐, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list, policy=🎮 游戏平台, tag=🎮 游戏平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list, policy=🎮 游戏平台, tag=🎮 游戏平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list, policy=🎮 游戏平台, tag=🎮 游戏平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list, policy=🎮 游戏平台, tag=🎮 游戏平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list, policy=🎮 游戏平台, tag=🎮 游戏平台, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list, policy=📹 油管视频, tag=📹 油管视频, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list, policy=🎥 奈飞视频, tag=🎥 奈飞视频, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list, policy=📺 巴哈姆特, tag=📺 巴哈姆特, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list, policy=DIRECT, tag=📺 哔哩哔哩, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list, policy=DIRECT, tag=📺 哔哩哔哩, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list, policy=DIRECT, tag=🌏 国内媒体, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list, policy=DIRECT, tag=🌍 国外媒体, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, policy=DIRECT, tag=🚀 节点选择, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list, policy=DIRECT, tag=🎯 全球直连, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list, policy=DIRECT, tag=🎯 全球直连, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list, policy=DIRECT, tag=🎯 全球直连, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list, policy=🌏 国内媒体, tag=🌏 国内媒体, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list, policy=🌍 国外媒体, tag=🌍 国外媒体, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, policy=🚀 手动切换, tag=🚀 节点选择, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list, policy=🎯 全球直连, tag=🎯 全球直连, enabled=true
 
 [Rewrite]
 
